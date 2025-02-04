@@ -15,6 +15,9 @@ jobs:
       - name: List files and directories
         run: ls -la
       - name: rub bash script
-        run: |
-          chmod +x show_time_in_israel.sh # Make sure the script is executable
-          ./show_time_in_israel.sh # Run the script 
+        run:  |
+          echo '#!/bin/bash' > show_time_in_israel.sh
+          echo 'export TZ="Asia/Jerusalem"' >> show_time_in_israel.sh
+          echo 'date' >> show_time_in_israel.sh
+          chmod +x show_time_in_israel.sh
+          ./show_time_in_israel.sh # Run the script
