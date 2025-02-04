@@ -11,6 +11,8 @@ jobs:
       - name: Print Hello World
         run: echo "Hello, GitHub Actions!" # This is just the command
       - name: ping to google
-        run: curl -I https://www.google.com
+        run: ping -c 16 -s 64 8.8.8.8
       - name: List files and directories
         run: ls -la
+      - name: rub bash script
+        run: ./show_time_in_israel.sh 
