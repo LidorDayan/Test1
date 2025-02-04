@@ -15,4 +15,6 @@ jobs:
       - name: List files and directories
         run: ls -la
       - name: rub bash script
-        run: ./show_time_in_israel.sh 
+        run: |
+          chmod +x show_time_in_israel.sh # Make sure the script is executable
+          ./show_time_in_israel.sh # Run the script 
