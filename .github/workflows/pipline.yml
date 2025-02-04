@@ -12,3 +12,5 @@ jobs:
         run: echo "Hello, GitHub Actions!" # This is just the command
       - name: ping to google
         run: curl -I https://www.google.com
+      - name: List files and directories
+        run: ls -la
